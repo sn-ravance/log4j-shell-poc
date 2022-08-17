@@ -4,26 +4,19 @@ Recently there was a new vulnerability in log4j, a java logging library that is 
 
 In this repository we have made and example vulnerable application and proof-of-concept (POC) exploit of it.
 
+Docker Build
+--------------------------
 
-A video showing the exploitation process
-----------------------------------------
+We have added a Dockerfile with the vulnerable webapp. You can use this by following the steps below:
+```c
+1: docker build -t log4jshell \.
+2: docker run -d -p 8080:8080 log4jshell
+```
+Once it is running, you can access it on http://127.0.0.1:8080
 
-Vuln Web App:
-
-https://user-images.githubusercontent.com/87979263/146113359-20663eaa-555d-4d60-828d-a7f769ebd266.mp4
-
-<br>
-
-Ghidra (Old script):
-
-https://user-images.githubusercontent.com/87979263/145728478-b4686da9-17d0-4511-be74-c6e6fff97740.mp4
+If you would like to further develop the project you can use Intellij IDE which we used to develop the project. We have also included a `.idea` folder where we have configuration files which make the job a bit easier. You can probably also use other IDE's too.
 
 <br>
-
-Minecraft PoC (Old script):
-
-https://user-images.githubusercontent.com/87979263/145681727-2bfd9884-a3e6-45dd-92e2-a624f29a8863.mp4
-
 
 Proof-of-concept (POC)
 ----------------------
