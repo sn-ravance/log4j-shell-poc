@@ -68,8 +68,8 @@ Our vulnerable application
 
 We have added a Dockerfile with the vulnerable webapp. You can use this by following the steps below:
 ```c
-1: docker build -t log4j-shell-poc .
-2: docker run --network host log4j-shell-poc
+1: docker build -t log4jshell \.
+2: docker run -d -p 8080:8080 log4jshell
 ```
 Once it is running, you can access it on localhost:8080
 
